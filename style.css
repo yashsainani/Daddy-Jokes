@@ -4,11 +4,20 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background: linear-gradient(45deg, slategrey, rgb(121, 138, 155));
+}
+
+body.active {
+    background: linear-gradient(135deg, rgb(48, 48, 48), #2f2f2f);
 }
 
 .container {
@@ -17,6 +26,12 @@ body {
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    width: 50%;
+}
+
+.container h1 {
+    color: aliceblue;
+    font-size: 3rem;
 }
 
 header {
@@ -37,6 +52,28 @@ header {
     width: 100%;
 }
 
+.options {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.options button {
+    width: 15%;
+}
+
+#type {
+    color: aliceblue;
+    font-size: 2.4rem;
+    text-shadow: 0 0 1rem rgba(255, 255, 255, 0.9);
+}
+
+.jokes {
+    color: aliceblue;
+    font-size: 1.6rem;
+    text-shadow: 0 0 1rem rgba(255, 255, 255, 0.9);
+}
+
 .btns {
     width: 100%;
     display: flex;
@@ -46,4 +83,24 @@ header {
 
 .btns button {
     width: 45%;
+}
+
+button {
+    padding: 5px 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
+    background-color: transparent;
+    color: aliceblue;transition: all 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.8),
+                inset 2px 2px 4px rgba(176, 176, 176, 0.7);
+}
+
+button.active {
+    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.5);
 }
